@@ -11,7 +11,7 @@ Main features include:
 - Collect all active IP connections on your computer then display with markers on a map
 - Generate a tabulated HTML table with all IP connections with their location
 
-A demonstration of the video can be found at: http://someurl.youtube.com
+A demonstration of the video can be found at: https://youtu.be/W19ky5GfJUs 
 
 <p align="left" width="100%">
   <img width="33%" src="images/ip-mapper.png">
