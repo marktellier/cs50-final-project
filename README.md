@@ -31,7 +31,7 @@ Libraries from other contributors used, include:
 - sqlite - database
 
 
-# Project setup on Windows
+# Project Setup on Windows
 
 ## Environment Setup
 
