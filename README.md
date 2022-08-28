@@ -1,25 +1,28 @@
 # CS50 Final Project - IP Mapper
 
-IP Mapper Widget for Windows is my final project for Harvard's CS50 Introduction to Computer Science.
+If your reading this, your computer has network connections to other systems that could be anywhere, globally. The purpose of this project is to provide a visual display of the source of those IP connections on a dynamic map.
 
-<img src="images/ip-mapper.png" alt="IP-Mapper" width="200"/>
+This project is a Windows GUI application developed with Python, leveraging Tkinter for the GUI Interface, and a SQLite3 database.    
 
-## Overview
+Main features include:  
 
-This project is a Windows GUI application developed with Python, leveraging Tkinter for the GUI Interface. The main purpose of this application is to display the source of IP Addresses on a global map using your default Web Browser.   
-
-Main features of this application include:  
-
-- Display computers public NAT'd IP address
-- Display the source location of an entered IP Address
-- Collect all active IP connections on your computer and display with markers on a map
+- Display a computers public NAT IP address
+- Display the source location of a manually public IP Address
+- Collect all active IP connections on your computer then display with markers on a map
 - Generate a tabulated HTML table with all IP connections with their location
 
 A demonstration of the video can be found at: http://someurl.youtube.com
 
-## Python Libaries
+<p align="left" width="100%">
+  <img width="33%" src="images/ip-mapper.png">
+  <img width="60%" src="images/map.png">
+</p>
 
-The project relies on many libraries from other contributors, including:
+
+
+# Python Libraries Used
+
+Libraries from other contributors used, include:
 
 - IPinfo - translates IP Addresses to geolocation data
 - ipaddress - simplifies working with IP Addresses
@@ -27,97 +30,39 @@ The project relies on many libraries from other contributors, including:
 - tkinter - provides the GUI interface
 - sqlite - database
 
-## Prerequisites
 
-### Installation
+# Project setup on Windows
 
-Create a Python virtual envirorment
-`python3 -m venv venv`
+## Environment Setup
 
-Either use `pip install -r requirements` or run the following commands:
+Install [Python for Windows](https://gitforwindows.org)
 
-- pip install ipinfo
-- pip install ipaddress
-- pip install psutil
-- pip install folium
-- apt install python3-tk
-
-### IPINFO Registration
-
-Register for your free API key at [ipinfo.io](https://ipinfo.io/) for translating IP Addresses to geolocation dada.  
-
-After registration, create a new System Variable
-API_KEY={YOUR_API_KEY}
-
-<img src="images/variable.png" alt="Variable" width="400"/>
-
-After registration, change line 35, entering your own API Key  
-`access_token = '123abc'`
-
-
-# Environment Setup
-
-Install VSCode  
-
-https://gitforwindows.org  
-Install Git for Windows  
-
-https://www.python.org  
-Install Python for Windows  
-
-python get-pip.py  
-
-create venv   
-python3 -m venv venv  
-
-https://pypi.org/project/ipinfo/  
-pip install ipinfo  
-
-https://pypi.org/project/ipaddress/  
-pip install ipaddress  
-
-https://pypi.org/project/psutil/  
-pip install psutil  
-
-https://pypi.org/project/folium/  
-pip install folium  
-
-apt install python3-tk  
-
-
-# What I learned / Skills / Challenges
-
-
-
-
-I started out using a library named `geocoder` which was easy to use and provided required geolocation data  for a given IP Address. However, as the application was being developed, I received an error  `Too many requests` from ipinfo.io. That's when I switched to the IPinfo library, requiring a free registration for an API key and access to 50,000 requests per month.
-
-Using folium is a breeze, it's feature rich and easy to use. Feed it data provided by IPinfo and it creates interactive maps with markers.
-
-Collected data is stored in a SQLite database and cleared everytime the application is started.
-
-There is a learning curve to using Tkinter for building a GUI applications. There is a lot of repetitive code for building the different components. I also found that it's easy to break the application when attempting to combine some of the statements.
-
-Overall, I learned a lot from this project, it was both fun and challenging. I also can't say enough about the CS50 course, it's top notch, fast paced and you will find yourself ...
-
-
-
-
-
-
-
-Project 
-
-```bash
-# tkinter
-pip install tk
-pip install geocoder
-pip install folium
-pip install pywebview  # only supports < python 3.8
-pip install sofi
-pip install tkhtmlview
-
-import ipaddress
-https://docs.python.org/3/library/ipaddress.html
+Clone the project from GitHub and run the following:
 
 ```
+cd cs50-final-project
+python -m venv venv
+venv\Scripts\Activate.ps1
+pip install -r requirements
+```
+
+## API Key
+
+Register to obtain a free API key at [ipinfo.io](https://ipinfo.io/) for translating IP Addresses to geolocation data.  
+
+## Environment Variable
+
+Create a new User Variable
+
+1. Run: `sysdm.cpl`
+2. Click Advanced tab
+3. Click Environment Variables
+4. Click New under User Variables
+5. Enter: 
+   1. Variable name: API_KEY
+   2. Variable value: {YOUR_API_KEY}
+
+
+## Application Usage
+Launch the application:  
+`python main.py`  
