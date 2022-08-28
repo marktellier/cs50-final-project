@@ -37,13 +37,13 @@ Libraries from other contributors used, include:
 
 Install [Python for Windows](https://gitforwindows.org)
 
-Clone the project from GitHub and run the following:
+Clone the project from GitHub and run the following in PowerShell:
 
 ```
 cd cs50-final-project
 python -m venv venv
 venv\Scripts\Activate.ps1
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## API Key
